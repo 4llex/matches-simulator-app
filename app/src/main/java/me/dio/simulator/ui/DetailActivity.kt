@@ -23,12 +23,12 @@ class DetailActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        loadMatchFromExtra()
+        launchDetailActivityWithExtra()
     }
 
-    private fun loadMatchFromExtra() {
+    private fun launchDetailActivityWithExtra() {
         intent?.extras?.getParcelable<Match>(Extras.MATCH)?.let {
-            Glide.with(this).load(it.location.image).into(binding.ivPlace)
+            Glide.with(this).load(it.location.photo).into(binding.ivPlace)
             supportActionBar?.title = it.location.name
 
             binding.tvDescription.text = it.description

@@ -9,17 +9,17 @@ public class Place implements Parcelable {
     @SerializedName("nome")
     private String name;
     @SerializedName("imagem")
-    private String image;
+    private String photo;
 
     protected Place(Parcel in) {
         name = in.readString();
-        image = in.readString();
+        photo = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
-        dest.writeString(image);
+        dest.writeString(photo);
     }
 
     @Override
@@ -47,11 +47,11 @@ public class Place implements Parcelable {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
