@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+            //throw new RuntimeException("Test Crash"); // Force a crash
         });
     }
 
